@@ -1,0 +1,7 @@
+<div class="votar-desvotar-container">
+    <h2>{{ nombreCancion }}</h2>
+    <p>Puntuación actual: {{ obtenerPuntuacionCancion() }}</p>
+  
+    <button (click)="votarPorCancion()">Votar</button>
+    <button (click)="desvotarPorCancion()">Desvotar</button>
+  </div>

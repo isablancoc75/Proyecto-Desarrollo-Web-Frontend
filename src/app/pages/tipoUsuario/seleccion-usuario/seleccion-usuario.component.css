@@ -1,0 +1,46 @@
+/* Estilos para el componente SeleccionUsuarioComponent */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    height: 100vh;
+    background-image: url('src\assets\images\goodvibes.jpg');
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+  }
+  
+  .container h2 {
+    font-size: 35px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .container button {
+    padding: 15px 20px;
+    font-size: 20px;
+    background-color: #5f035a;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    margin: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .container .selected-user-type {
+    font-size: 22px;
+    color: #007bff;
+    margin-top: 25px;
+  }
+  
+  
+  
+  
