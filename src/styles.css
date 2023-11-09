@@ -14,11 +14,10 @@ body {
 
 .banner {
    width: 100%;
-   height: 100vh;
+   height: 95vh;
    background-color:172A3A;
    background-size: cover;
    background-position: center;
-
 }
 
 label {
@@ -40,9 +39,9 @@ form {
 }
 
 .navbar {
-    width: 85%;
+    width: 90%;
     margin: auto;
-    padding: 35px 0;
+    padding: 50px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,7 +91,7 @@ form {
  .teamt {
    width: 100%;
     position: absolute;
-    top: 150%;
+    top: 160%;
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
@@ -130,13 +129,13 @@ p{
 */
 .parrafos_proyecto {
    
-   width: 300px;
+   width: 650px;
    text-align:justify;
    color: black;
-   margin-top: 5%;
-   margin-bottom: 5%;
-   margin-left: 40%;
-   margin-right: 15%;
+   margin-top: 3%;
+   margin-bottom: 3%;
+   margin-left: 24%;
+   margin-right: 76%;
 
 }
 
@@ -152,15 +151,15 @@ p{
  }
 
  button {
-    width: 200px;
+    width: 300px;
     padding: 15px 0;
     text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
+    margin: 25px 10px;
+    border-radius: 20px;
     font-weight: bold;
-    border: 2px solid #009688;
+    border: 3px solid #007d96;
     background: transparent;
-    color: blue;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -190,7 +189,7 @@ p{
  .tablaProyecto {
 
    border-collapse: collapse;
-   width: 50%;
+   width: 80%;
    margin: 0 auto;
 }
 

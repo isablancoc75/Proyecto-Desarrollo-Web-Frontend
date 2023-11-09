@@ -10,6 +10,7 @@ import { SeleccionUsuarioComponent } from './pages/tipoUsuario/seleccion-usuario
 import { IniciarAdminComponent } from './pages/admin/iniciar-admin/iniciar-admin.component';
 import { IniciarSesionComponent } from './pages/usuario/iniciar-sesion/iniciar-sesion.component';
 import { CrearAdminComponent } from './pages/admin/crear-admin/crear-admin.component';
+import { BienvenidaComponent } from './pages/home/bienvenida/bienvenida.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'seleccion-usuario', component: SeleccionUsuarioComponent},
   {path: 'iniciar-admin', component: IniciarAdminComponent},
   {path: "iniciar-sesion", component: IniciarSesionComponent},
+  {path: "bienvenida", component: BienvenidaComponent},
   {path: "crear-admin", component: CrearAdminComponent},
   {path: 'crear-cuenta', component: CrearCuentaComponent },
   {path: 'ver-listas', component: VerListasComponent }

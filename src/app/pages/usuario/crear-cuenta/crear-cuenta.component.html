@@ -1,16 +1,17 @@
-<title>Crear cuenta</title>
 <link rel="stylesheet" type="text/css" href="../crear-cuenta/crear-cuenta.component.css" >
-<div class="login-container">
-    <h2>Iniciar Sesi&oacute;n</h2>
-    <form>
-      <label for="email">Correo Electr&oacute;nico:</label>
-      <input type="email" id="email" name="email" required>
-  
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" name="password" required>
-  
-      <button type="submit">Iniciar Sesi&oacute;n</button>
-    </form>
-    <p>No tienes una cuenta? <a routerLink="/newAccount">Reg&iacute;strate aqu&iacute;</a></p>
-  </div>
-  
+<div class="container">
+  <h1>Crear cuenta votante</h1>
+  <form (ngSubmit)="createAccount()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required [(ngModel)]="nombre">
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required [(ngModel)]="correo">
+
+    <label for="contraseña">Contraseña:</label>
+    <input type="password" id="password" name="password" required [(ngModel)]="password">
+
+    <button type="submit">Crear cuenta</button>
+  </form>
+</div>
+<router-outlet></router-outlet>

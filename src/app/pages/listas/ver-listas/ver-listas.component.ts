@@ -12,11 +12,12 @@ export class VerListasComponent {
 
   constructor(private verListasService: VerListasService) {
     this.actualizarListasPorGenero();
-  }
+  } 
 
   actualizarListasPorGenero() {
     this.listasPorGenero = this.verListasService.getListasPorGenero(this.generoSeleccionado);
   }
 }
+
 
 

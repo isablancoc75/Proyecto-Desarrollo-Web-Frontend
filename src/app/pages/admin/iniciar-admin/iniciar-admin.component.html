@@ -11,7 +11,9 @@
       <input type="password" id="password" name="password" [(ngModel)]="adminPassword" required>
       
       <button type="submit">Iniciar Sesión</button>
-      <a routerLink="/crear-admin">Regístrate</a>
+      <p>¿No tienes una cuenta?</p>
+      <a routerLink="/crear-cuenta">Regístrate</a>
     </form>
   </div>
+  <router-outlet></router-outlet>
   

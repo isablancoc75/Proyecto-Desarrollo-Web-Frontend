@@ -17,6 +17,7 @@ import { IniciarAdminComponent } from './pages/admin/iniciar-admin/iniciar-admin
 import { GenerosComponent } from './pages/admin/generos/generos.component';
 import { CancionesComponent } from './pages/admin/canciones/canciones.component';
 import { SeleccionUsuarioComponent } from './pages/tipoUsuario/seleccion-usuario/seleccion-usuario.component';
+import { BienvenidaComponent } from './pages/home/bienvenida/bienvenida.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SeleccionUsuarioComponent } from './pages/tipoUsuario/seleccion-usuario
     IniciarAdminComponent,
     GenerosComponent,
     CancionesComponent,
-    SeleccionUsuarioComponent
+    SeleccionUsuarioComponent,
+    BienvenidaComponent
   ],
   imports: [
     BrowserModule,
