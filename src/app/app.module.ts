@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ProyectoComponent } from './proyecto/proyecto.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { ContactenosComponent } from './contactenos/contactenos.component';
@@ -18,6 +19,7 @@ import { GenerosComponent } from './pages/admin/generos/generos.component';
 import { CancionesComponent } from './pages/admin/canciones/canciones.component';
 import { SeleccionUsuarioComponent } from './pages/tipoUsuario/seleccion-usuario/seleccion-usuario.component';
 import { BienvenidaComponent } from './pages/home/bienvenida/bienvenida.component';
+import { WelcomeComponent } from './pages/homeAdim/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +37,15 @@ import { BienvenidaComponent } from './pages/home/bienvenida/bienvenida.componen
     GenerosComponent,
     CancionesComponent,
     SeleccionUsuarioComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,8 @@ import { IniciarAdminComponent } from './pages/admin/iniciar-admin/iniciar-admin
 import { IniciarSesionComponent } from './pages/usuario/iniciar-sesion/iniciar-sesion.component';
 import { CrearAdminComponent } from './pages/admin/crear-admin/crear-admin.component';
 import { BienvenidaComponent } from './pages/home/bienvenida/bienvenida.component';
+import { WelcomeComponent } from './pages/homeAdim/welcome/welcome.component';
+import { GenerosComponent } from './pages/admin/generos/generos.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -21,9 +23,11 @@ const routes: Routes = [
   {path: 'iniciar-admin', component: IniciarAdminComponent},
   {path: "iniciar-sesion", component: IniciarSesionComponent},
   {path: "bienvenida", component: BienvenidaComponent},
+  {path: "welcome", component:WelcomeComponent},
   {path: "crear-admin", component: CrearAdminComponent},
   {path: 'crear-cuenta', component: CrearCuentaComponent },
-  {path: 'ver-listas', component: VerListasComponent }
+  {path: 'ver-listas', component: VerListasComponent },
+  {path: 'crud-generos', component: GenerosComponent}
 ];
 
 @NgModule({
