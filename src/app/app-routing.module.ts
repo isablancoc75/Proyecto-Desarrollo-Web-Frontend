@@ -14,6 +14,7 @@ import { BienvenidaComponent } from './pages/home/bienvenida/bienvenida.componen
 import { WelcomeComponent } from './pages/homeAdim/welcome/welcome.component';
 import { GenerosComponent } from './pages/admin/generos/generos.component';
 import { BuscarCancionComponent } from './pages/listas/buscar-cancion/buscar-cancion.component';
+import { CancionesComponent } from './pages/admin/canciones/canciones.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -25,11 +26,12 @@ const routes: Routes = [
   {path: "crear-admin", component: CrearAdminComponent},
   {path: "welcome", component:WelcomeComponent},
   {path: 'crud-generos', component: GenerosComponent},
+  {path: 'crud-canciones', component: CancionesComponent},
   {path: "iniciar-sesion", component: IniciarSesionComponent},
   {path: 'crear-cuenta', component: CrearCuentaComponent },
   {path: "bienvenida", component: BienvenidaComponent},
   {path: 'ver-listas', component: VerListasComponent },
-  {path: 'buscar-cancion', component:BuscarCancionComponent}
+  {path: 'buscar-cancion', component:BuscarCancionComponent},
 ];
 
 @NgModule({
