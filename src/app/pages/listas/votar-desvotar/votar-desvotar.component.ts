@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { VotarDesvotarService } from 'src/app/services/Lista/votar-desvotar.service';
 
 @Component({
@@ -6,22 +6,36 @@ import { VotarDesvotarService } from 'src/app/services/Lista/votar-desvotar.serv
   templateUrl: './votar-desvotar.component.html',
   styleUrls: ['./votar-desvotar.component.css']
 })
-export class VotarDesvotarComponent {
-  cancionId: number = 0; // Inicialización con un valor por defecto
-  nombreCancion: string = '';
 
-  constructor(private votarDesvotarService: VotarDesvotarService) { }
+export class VotarDesvotarComponent implements OnInit {
+  canciones: any[] = [];
+  votos: { [cancionId: number]: number } = {};
 
-  votarPorCancion() {
-    this.votarDesvotarService.votarPorCancion(this.cancionId);
+  constructor(private votacionService: VotarDesvotarService) {}
+
+  ngOnInit() {
+    this.votacionService.votos$.subscribe(votos => {
+      this.votos = votos;
+    });
+
+    // Por simplicidad, asumimos que ya tenemos una lista de canciones
+    this.canciones = [
+      { id_cancion: 1, nombre: 'Canción 1' },
+      { id_cancion: 2, nombre: 'Canción 2' },
+      // Otras canciones
+    ];
   }
 
-  desvotarPorCancion() {
-    this.votarDesvotarService.desvotarPorCancion(this.cancionId);
+  votar(cancionId: number) {
+    this.votacionService.votar(cancionId);
   }
 
-  obtenerPuntuacionCancion() {
-    return this.votarDesvotarService.obtenerPuntuacionCancion(this.cancionId);
+  desvotar(cancionId: number) {
+    this.votacionService.desvotar(cancionId);
   }
+
+  obtenerTotalVotos(cancionId: number): number {
+    return this.votos[cancionId] || 0;
+  }
+
 }
-

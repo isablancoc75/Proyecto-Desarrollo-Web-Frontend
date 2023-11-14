@@ -1,7 +1,19 @@
-<div class="votar-desvotar-container">
-    <h2>{{ nombreCancion }}</h2>
-    <p>Puntuación actual: {{ obtenerPuntuacionCancion() }}</p>
-  
-    <button (click)="votarPorCancion()">Votar</button>
-    <button (click)="desvotarPorCancion()">Desvotar</button>
+<title>Votar o desvotar canciones</title>
+<link rel="stylesheet" type="text/css" href="C:\Users\isabl\Documents\Entrega2\src\app\pages\listas\votar-desvotar\votar-desvotar.component.css">
+
+<!-- votar-desvotar.component.html -->
+<div class="canciones-container">
+  <div *ngFor="let cancion of canciones" class="cancion-item">
+    <p>{{ cancion.nombre }}</p>
+    <div class="votos-container">
+      <button (click)="votar(cancion.id_cancion)">Votar</button>
+      <button (click)="desvotar(cancion.id_cancion)">Desvotar</button>
+      <p>Total de votos: {{ obtenerTotalVotos(cancion.id_cancion) }}</p>
+    </div>
   </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
+

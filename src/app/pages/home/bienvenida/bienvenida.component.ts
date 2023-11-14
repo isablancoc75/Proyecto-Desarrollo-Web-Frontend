@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { CancionesService } from 'src/app/services/Admin/canciones.service';
 @Component({
   selector: 'app-bienvenida',
   templateUrl: './bienvenida.component.html',
   styleUrls: ['./bienvenida.component.css']
 })
-export class BienvenidaComponent {
-  constructor() {}
+export class BienvenidaComponent implements OnInit {
+  canciones: any[] = [];
+  constructor(private cancionesService: CancionesService) {}
 
   ngOnInit() {
-    // Puedes agregar lógica adicional aquí si es necesario
+    this.loadCanciones();
+  }
+  
+  loadCanciones() {
+    this.cancionesService.getCanciones().subscribe(data => {
+      this.canciones = data;
+      console.log('Lista de Canciones:', this.canciones);
+    });
   }
 }

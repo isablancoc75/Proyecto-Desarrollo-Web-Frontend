@@ -1,31 +1,26 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class VotarDesvotarService {
-  private canciones: { id: number; nombre: string; puntuacion: number }[] = [
-    { id: 1, nombre: 'Canción 1', puntuacion: 0 },
-    { id: 2, nombre: 'Canción 2', puntuacion: 0 },
-    // Agrega más canciones
-  ];
+  private votosSubject = new BehaviorSubject<number[]>([]);
+  votos$ = this.votosSubject.asObservable();
 
-  votarPorCancion(cancionId: number) {
-    const cancion = this.canciones.find((c) => c.id === cancionId);
-    if (cancion) {
-      cancion.puntuacion++;
+  constructor() {}
+
+  votar(cancionId: number) {
+    const votosActuales = this.votosSubject.value;
+    this.votosSubject.next({ ...votosActuales, [cancionId]: (votosActuales[cancionId] || 0) + 1 });
+  }
+
+  desvotar(cancionId: number) {
+    const votosActuales = this.votosSubject.value;
+    if (votosActuales[cancionId] > 0) {
+      this.votosSubject.next({ ...votosActuales, [cancionId]: votosActuales[cancionId] - 1 });
     }
   }
-
-  desvotarPorCancion(cancionId: number) {
-    const cancion = this.canciones.find((c) => c.id === cancionId);
-    if (cancion && cancion.puntuacion > 0) {
-      cancion.puntuacion--;
-    }
-  }
-
-  obtenerPuntuacionCancion(cancionId: number) {
-    const cancion = this.canciones.find((c) => c.id === cancionId);
-    return cancion ? cancion.puntuacion : 0;
-  }
+  
 }
