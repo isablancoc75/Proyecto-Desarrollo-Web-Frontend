@@ -1,16 +1,13 @@
 /* generos.component.css */
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 120vh;
-  max-width: 525px;
-  margin: 0 auto;
-  padding: 40px;
-  border-radius: 30px;
+  height: 125vh;
   text-align: center;
+  background-image: url('src\assets\images\goodvibes.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 h2 {
@@ -32,7 +29,7 @@ h3 {
   padding: 0 50px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgb(120, 42, 184);
-  background-color: #2f5c9f8a;
+  background-color: #8c2f9f;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +86,7 @@ button {
   li {
     margin: 10px 0;
     padding: 20px;
-    background-color: #2f5c9f86;
+    background-color: rgb(120, 42, 184);
     display: flex;
     justify-content: space-between;
     border-radius: 30px;

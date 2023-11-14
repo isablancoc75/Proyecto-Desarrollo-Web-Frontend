@@ -13,6 +13,7 @@ import { CrearAdminComponent } from './pages/admin/crear-admin/crear-admin.compo
 import { BienvenidaComponent } from './pages/home/bienvenida/bienvenida.component';
 import { WelcomeComponent } from './pages/homeAdim/welcome/welcome.component';
 import { GenerosComponent } from './pages/admin/generos/generos.component';
+import { BuscarCancionComponent } from './pages/listas/buscar-cancion/buscar-cancion.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -21,13 +22,14 @@ const routes: Routes = [
   {path: 'contactenos', component: ContactenosComponent},
   {path: 'seleccion-usuario', component: SeleccionUsuarioComponent},
   {path: 'iniciar-admin', component: IniciarAdminComponent},
-  {path: "iniciar-sesion", component: IniciarSesionComponent},
-  {path: "bienvenida", component: BienvenidaComponent},
-  {path: "welcome", component:WelcomeComponent},
   {path: "crear-admin", component: CrearAdminComponent},
+  {path: "welcome", component:WelcomeComponent},
+  {path: 'crud-generos', component: GenerosComponent},
+  {path: "iniciar-sesion", component: IniciarSesionComponent},
   {path: 'crear-cuenta', component: CrearCuentaComponent },
+  {path: "bienvenida", component: BienvenidaComponent},
   {path: 'ver-listas', component: VerListasComponent },
-  {path: 'crud-generos', component: GenerosComponent}
+  {path: 'buscar-cancion', component:BuscarCancionComponent}
 ];
 
 @NgModule({
